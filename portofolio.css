@@ -82,7 +82,6 @@ body {
 
 .profile-ring {
     background: conic-gradient(from 0deg, #3b82f6, #8b5cf6, #06b6d4, #3b82f6);
-    animation: rotate-slow 8s linear infinite;
     padding: 4px;
     border-radius: 9999px;
 }
@@ -92,8 +91,8 @@ body {
     background: #f0f4f8;
 }
 .profile-img-container {
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
     border-radius: 9999px;
     overflow: hidden;
     position: relative;
