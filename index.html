@@ -18,9 +18,11 @@
                 <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
                     <span class="text-white font-bold text-sm" style="font-family: 'Bricolage Grotesque', sans-serif;">KR</span>
                 </div>
-                <span class="text-slate-800 font-medium text-sm hidden sm:block" style="font-family: 'Space Grotesk', sans-serif;">Kristoforus Renggo</span>
+                <span class="font-medium text-sm hidden sm:block" style="font-family: 'Space Grotesk', sans-serif;">Kristoforus Renggo</span>
             </div>
-            <div class="hidden md:flex items-center gap-8">
+            <!-- Menu navigasi tampil di semua ukuran layar -->
+            <div class="flex items-center gap-6">
+                <a href="#home" class="nav-link">Home</a>
                 <a href="#identity" class="nav-link">Identitas</a>
                 <a href="#heart" class="nav-link">HEART</a>
                 <a href="#works" class="nav-link">Karya</a>
@@ -28,126 +30,102 @@
                 <a href="#commitment" class="nav-link">Komitmen</a>
             </div>
             <div class="flex items-center gap-4">
-                <a href="mailto:renggokristo@gmail.com" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-xs font-medium px-4 py-2 rounded-full hover:from-blue-700 hover:to-blue-600 transition-all duration-300 shadow-lg shadow-blue-500/25">
+                <a href="mailto:renggokristo@gmail.com" class="inline-flex items-center gap-2 text-white text-xs font-medium px-4 py-2 rounded-full transition-all duration-300 shadow-lg" style="background: linear-gradient(135deg, #00D4FF, #FF00FF);">
                     <i data-lucide="mail" class="w-3.5 h-3.5"></i>
                     Hubungi
                 </a>
-                <button id="mobileMenuBtn" class="md:hidden text-slate-500 hover:text-slate-800 transition-colors">
-                    <i data-lucide="menu" class="w-5 h-5"></i>
-                </button>
             </div>
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-overlay" id="mobileOverlay"></div>
-    <div class="mobile-menu" id="mobileMenu">
-        <button id="mobileMenuClose" class="absolute top-5 right-5 text-slate-500 hover:text-slate-800 transition-colors">
-            <i data-lucide="x" class="w-5 h-5"></i>
-        </button>
-        <div class="flex flex-col gap-6">
-            <a href="#identity" class="nav-link text-base mobile-nav-link">Identitas</a>
-            <a href="#heart" class="nav-link text-base mobile-nav-link">Nilai HEART</a>
-            <a href="#works" class="nav-link text-base mobile-nav-link">Karya</a>
-            <a href="#skills" class="nav-link text-base mobile-nav-link">Keahlian</a>
-            <a href="#commitment" class="nav-link text-base mobile-nav-link">Komitmen</a>
-            <div class="pt-4 border-t border-slate-200/60">
-                <a href="mailto:renggokristo@gmail.com" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-sm font-medium px-5 py-2.5 rounded-full mobile-nav-link">
-                    <i data-lucide="mail" class="w-4 h-4"></i>
-                    Hubungi Saya
-                </a>
-            </div>
-        </div>
-    </div>
-
     <!-- Hero Section -->
-    <section class="hero-bg relative min-h-screen flex items-center justify-center">
+    <section id="home" class="hero-bg relative min-h-screen flex items-center justify-center">
         <div class="hero-dots absolute inset-0"></div>
         <div class="hero-circuit"></div>
 
-        <div class="glow-orb w-96 h-96 bg-blue-400/20 top-10 -left-48" style="animation: pulse-glow 6s ease-in-out infinite;"></div>
-        <div class="glow-orb w-72 h-72 bg-purple-400/15 bottom-20 -right-36" style="animation: pulse-glow 8s ease-in-out infinite 2s;"></div>
-        <div class="glow-orb w-64 h-64 bg-cyan-400/10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="animation: pulse-glow 7s ease-in-out infinite 1s;"></div>
+        <div class="glow-orb w-96 h-96 top-10 -left-48" style="animation: glowFloat 6s ease-in-out infinite;"></div>
+        <div class="glow-orb w-72 h-72 bottom-20 -right-36" style="animation: glowFloat 8s ease-in-out infinite 2s;"></div>
+        <div class="glow-orb w-64 h-64 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="animation: glowFloat 7s ease-in-out infinite 1s;"></div>
 
         <div class="relative z-10 max-w-4xl mx-auto px-6 text-center pt-24 pb-16">
             <!-- Profile Image -->
             <div class="flex justify-center mb-10" style="animation: fadeInUp 1s ease-out 0.2s both;">
-                <div class="profile-ring" style="box-shadow: 0 8px 40px -8px rgba(59,130,246,0.3);">
-                    <div class="profile-ring-inner">
-                        <div class="profile-img-container">
-                            <img src="https://z-cdn-media.chatglm.cn/files/2edcd561-cedf-4c9a-a187-56b4ce7a2a1c.png?auth_key=1877965809-123383ce450c4d44aabcef461bde0208-0-bb33fce66cfa089dd9311450c12af613" alt="Kristoforus Renggo" id="profileImg">
-                            <i data-lucide="user" class="w-16 h-16 profile-placeholder-icon absolute" id="profilePlaceholder"></i>
-                        </div>
+                <div class="profile-ring">
+                    <div class="profile-img-container">
+                        <img src="https://z-cdn-media.chatglm.cn/files/2edcd561-cedf-4c9a-a187-56b4ce7a2a1c.png?auth_key=1877965809-123383ce450c4d44aabcef461bde0208-0-bb33fce66cfa089dd9311450c12af613" alt="Kristoforus Renggo" id="profileImg">
+                        <i data-lucide="user" class="w-16 h-16 absolute" id="profilePlaceholder" style="color: #00D4FF; display: none;"></i>
                     </div>
                 </div>
             </div>
 
             <!-- Status badge -->
             <div class="flex justify-center mb-8" style="animation: fadeInUp 1s ease-out 0.4s both;">
-                <div class="ethic-badge bg-white/60 border border-slate-200/60 text-slate-600 shadow-sm">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500" style="animation: pulse 2s ease-in-out infinite;"></span>
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm" style="background: rgba(0,212,255,0.1); border: 1px solid rgba(0,212,255,0.3); color: #00D4FF;">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400" style="animation: pulse 2s ease-in-out infinite;"></span>
                     Open to Opportunities
                 </div>
             </div>
 
             <!-- Name -->
-            <h1 class="mb-4" style="font-family: 'Bricolage Grotesque', sans-serif; font-size: clamp(2.5rem, 8vw, 5rem); font-weight: 400; line-height: 0.95; letter-spacing: -0.03em; animation: fadeInUp 1s ease-out 0.5s both; color: #0f172a;">
+            <h1 class="mb-4" style="font-family: 'Orbitron', monospace; font-size: clamp(2.5rem, 8vw, 5rem); font-weight: 900; line-height: 0.95; letter-spacing: -0.03em; animation: fadeInUp 1s ease-out 0.5s both;">
                 Kristoforus
-                <span class="block" style="background: linear-gradient(135deg, #2563eb, #7c3aed, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-size: 200% 200%; animation: gradient-shift 4s ease-in-out infinite;">Renggo</span>
+                <span class="block gradient-text-dark">Renggo</span>
             </h1>
 
             <!-- Role -->
-            <p class="text-slate-500 text-base sm:text-lg font-light tracking-wide mb-6" style="animation: fadeInUp 1s ease-out 0.6s both;">
-                Web Developer <span class="text-slate-300 mx-2">|</span> Software Engineering
+            <p class="text-sm sm:text-lg font-light tracking-wide mb-6" style="color: #CCEFFF; animation: fadeInUp 1s ease-out 0.6s both; font-family: 'Rajdhani', sans-serif; letter-spacing: 2px;">
+                Web Developer <span style="color: #00D4FF; margin: 0 8px;">|</span> Software Engineering
             </p>
 
             <!-- Education -->
-            <div class="flex items-center justify-center gap-2 text-slate-500 text-sm mb-10" style="animation: fadeInUp 1s ease-out 0.7s both;">
-                <i data-lucide="graduation-cap" class="w-4 h-4 text-blue-500"></i>
+            <div class="flex items-center justify-center gap-2 text-sm mb-10" style="color: #94a3b8; animation: fadeInUp 1s ease-out 0.7s both;">
+                <i data-lucide="graduation-cap" class="w-4 h-4" style="color: #00D4FF;"></i>
                 <span>D-III Teknologi Informasi</span>
-                <span class="text-slate-300">•</span>
+                <span style="color: #334155;">•</span>
                 <span>Politeknik Elbajo Commodus</span>
-                <span class="text-slate-300">•</span>
+                <span style="color: #334155;">•</span>
                 <span>2026</span>
             </div>
 
             <!-- Quote -->
             <div class="max-w-2xl mx-auto mb-12" style="animation: fadeInUp 1s ease-out 0.8s both;">
-                <div class="glass-card rounded-2xl p-6 sm:p-8" style="box-shadow: 0 4px 30px -5px rgba(59,130,246,0.08);">
-                    <i data-lucide="quote" class="w-6 h-6 text-blue-500/30 mb-4 mx-auto"></i>
-                    <p class="quote-text text-slate-600 text-sm sm:text-base leading-relaxed mb-4">
+                <div class="glass-card rounded-2xl p-6 sm:p-8">
+                    <i data-lucide="quote" class="w-6 h-6 mb-4 mx-auto" style="color: rgba(0,212,255,0.4);"></i>
+                    <p style="font-style: italic; color: #CCEFFF; font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">
                         "Kompetensi membawa saya ke wawancara, tetapi integritas yang membangun karier saya."
                     </p>
-                    <p class="text-slate-400 text-xs uppercase tracking-widest font-medium">— Prinsip Profesional Saya</p>
+                    <p style="color: #64748b; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.2em; font-family: 'Rajdhani', sans-serif;">— Prinsip Profesional Saya</p>
                 </div>
             </div>
 
             <!-- HEART acronym -->
             <div class="flex items-center justify-center gap-3 sm:gap-4 flex-wrap" style="animation: fadeInUp 1s ease-out 0.9s both;">
-                <span class="text-blue-600 text-sm font-semibold tracking-wider" style="animation: heart-beat 2s ease-in-out infinite;">H</span>
-                <span class="text-emerald-600 text-sm font-semibold tracking-wider" style="animation: heart-beat 2s ease-in-out infinite 0.2s;">E</span>
-                <span class="text-amber-600 text-sm font-semibold tracking-wider" style="animation: heart-beat 2s ease-in-out infinite 0.4s;">A</span>
-                <span class="text-purple-600 text-sm font-semibold tracking-wider" style="animation: heart-beat 2s ease-in-out infinite 0.6s;">R</span>
-                <span class="text-red-600 text-sm font-semibold tracking-wider" style="animation: heart-beat 2s ease-in-out infinite 0.8s;">T</span>
+                <span style="color: #00D4FF; font-size: 0.875rem; font-weight: 700; letter-spacing: 0.1em; font-family: 'Orbitron', monospace; animation: neonPulse 2s infinite;">H</span>
+                <span style="color: #34d399; font-size: 0.875rem; font-weight: 700; letter-spacing: 0.1em; font-family: 'Orbitron', monospace; animation: neonPulse 2s infinite 0.2s;">E</span>
+                <span style="color: #fbbf24; font-size: 0.875rem; font-weight: 700; letter-spacing: 0.1em; font-family: 'Orbitron', monospace; animation: neonPulse 2s infinite 0.4s;">A</span>
+                <span style="color: #a78bfa; font-size: 0.875rem; font-weight: 700; letter-spacing: 0.1em; font-family: 'Orbitron', monospace; animation: neonPulse 2s infinite 0.6s;">R</span>
+                <span style="color: #f87171; font-size: 0.875rem; font-weight: 700; letter-spacing: 0.1em; font-family: 'Orbitron', monospace; animation: neonPulse 2s infinite 0.8s;">T</span>
             </div>
 
             <!-- Scroll indicator -->
             <div class="mt-16" style="animation: fadeInUp 1s ease-out 1.2s both;">
-                <a href="#identity" class="inline-flex flex-col items-center gap-2 text-slate-400 hover:text-slate-600 transition-colors">
-                    <span class="text-xs uppercase tracking-widest">Scroll</span>
-                    <i data-lucide="chevron-down" class="w-4 h-4" style="animation: float 2s ease-in-out infinite;"></i>
+                <a href="#identity" class="inline-flex flex-col items-center gap-2 transition-colors" style="color: #64748b; background: none; box-shadow: none;">
+                    <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.2em; color: #64748b;">Scroll</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4" style="animation: glowFloat 2s ease-in-out infinite; color: #00D4FF;"></i>
                 </a>
             </div>
         </div>
     </section>
 
+    <div class="section-divider max-w-7xl mx-auto"></div>
+
     <!-- Professional Identity -->
     <section id="identity" class="relative py-24 sm:py-32">
-        <div class="glow-orb w-80 h-80 bg-blue-400/10 -top-40 left-1/2 -translate-x-1/2"></div>
+        <div class="glow-orb w-80 h-80 -top-40 left-1/2 -translate-x-1/2" style="opacity:0.1;"></div>
         <div class="max-w-7xl mx-auto px-6">
             <div class="animate-on-scroll mb-16">
                 <span class="section-label block mb-4">01 — Identitas Profesional</span>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight" style="font-family: 'Bricolage Grotesque', sans-serif; color: #0f172a;">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight">
                     Siapa Saya sebagai<br>
                     <span class="gradient-text-dark">Seorang Profesional</span>
                 </h2>
@@ -155,31 +133,31 @@
 
             <div class="grid lg:grid-cols-5 gap-8 lg:gap-12">
                 <div class="lg:col-span-2 animate-on-scroll delay-1">
-                    <div class="glass-card rounded-2xl p-6 sm:p-8" style="box-shadow: 0 4px 30px -5px rgba(59,130,246,0.06);">
+                    <div class="glass-card rounded-2xl p-6 sm:p-8">
                         <div class="space-y-4">
-                            <div class="info-row">
-                                <span class="text-slate-400 text-sm">Nama Lengkap</span>
-                                <span class="text-slate-800 text-sm font-medium text-right">Kristoforus Renggo</span>
+                            <div class="info-row flex justify-between items-center border-b border-white/10 pb-3">
+                                <span style="color: #64748b; font-size: 0.875rem;">Nama Lengkap</span>
+                                <span style="color: #CCEFFF; font-size: 0.875rem; font-weight: 500;">Kristoforus Renggo</span>
                             </div>
-                            <div class="info-row">
-                                <span class="text-slate-400 text-sm">NIM</span>
-                                <span class="text-slate-800 text-sm font-medium font-mono">24021002</span>
+                            <div class="info-row flex justify-between items-center border-b border-white/10 pb-3">
+                                <span style="color: #64748b; font-size: 0.875rem;">NIM</span>
+                                <span style="color: #00D4FF; font-size: 0.875rem; font-weight: 500; font-family: 'JetBrains Mono', monospace;">24021002</span>
                             </div>
-                            <div class="info-row">
-                                <span class="text-slate-400 text-sm">Program Studi</span>
-                                <span class="text-slate-800 text-sm font-medium text-right">D-III Teknologi Informasi</span>
+                            <div class="info-row flex justify-between items-center border-b border-white/10 pb-3">
+                                <span style="color: #64748b; font-size: 0.875rem;">Program Studi</span>
+                                <span style="color: #CCEFFF; font-size: 0.875rem; font-weight: 500; text-align: right;">D-III Teknologi Informasi</span>
                             </div>
-                            <div class="info-row">
-                                <span class="text-slate-400 text-sm">Institusi</span>
-                                <span class="text-slate-800 text-sm font-medium text-right">Politeknik Elbajo Commodus</span>
+                            <div class="info-row flex justify-between items-center border-b border-white/10 pb-3">
+                                <span style="color: #64748b; font-size: 0.875rem;">Institusi</span>
+                                <span style="color: #CCEFFF; font-size: 0.875rem; font-weight: 500; text-align: right;">Politeknik Elbajo Commodus</span>
                             </div>
-                            <div class="info-row">
-                                <span class="text-slate-400 text-sm">Tahun Ajaran</span>
-                                <span class="text-slate-800 text-sm font-medium">2025 / 2026</span>
+                            <div class="info-row flex justify-between items-center border-b border-white/10 pb-3">
+                                <span style="color: #64748b; font-size: 0.875rem;">Tahun Ajaran</span>
+                                <span style="color: #CCEFFF; font-size: 0.875rem; font-weight: 500;">2025 / 2026</span>
                             </div>
                             <div class="flex justify-between items-start pt-1">
-                                <span class="text-slate-400 text-sm">Minat</span>
-                                <span class="text-slate-800 text-sm font-medium text-right">Web Developer &<br>Software Engineering</span>
+                                <span style="color: #64748b; font-size: 0.875rem;">Minat</span>
+                                <span style="color: #CCEFFF; font-size: 0.875rem; font-weight: 500; text-align: right;">Web Developer &<br>Software Engineering</span>
                             </div>
                         </div>
                     </div>
@@ -187,44 +165,44 @@
 
                 <div class="lg:col-span-3 space-y-8">
                     <div class="animate-on-scroll delay-2">
-                        <div class="glass-card rounded-2xl p-6 sm:p-8" style="box-shadow: 0 4px 30px -5px rgba(59,130,246,0.06);">
-                            <h3 class="text-lg font-medium tracking-tight mb-4 text-slate-800" style="font-family: 'Space Grotesk', sans-serif;">Profil Singkat</h3>
-                            <p class="text-slate-500 text-sm leading-relaxed font-light">
+                        <div class="glass-card rounded-2xl p-6 sm:p-8">
+                            <h3 class="text-lg font-medium tracking-tight mb-4" style="font-family: 'Orbitron', monospace; color: #00D4FF;">Profil Singkat</h3>
+                            <p style="color: #94a3b8; font-size: 0.875rem; line-height: 1.8; margin-bottom: 1rem;">
                                 Saya adalah Kristoforus Renggo, mahasiswa Program Studi D-III Teknologi Informasi di Politeknik Elbajo Commodus. Saya memiliki ketertarikan mendalam pada bidang Web Development dan Software Engineering — dua bidang yang menurut saya memiliki dampak nyata bagi kehidupan masyarakat di era digital ini.
                             </p>
-                            <p class="text-slate-500 text-sm leading-relaxed font-light mt-4">
+                            <p style="color: #94a3b8; font-size: 0.875rem; line-height: 1.8; margin-bottom: 1rem;">
                                 Selama masa perkuliahan, saya telah terlibat dalam pengembangan dan pengelolaan website nyata, termasuk menjadi administrator website Carbon Testing. Pengalaman ini mengajarkan saya bahwa membangun sistem digital bukan sekadar urusan teknis, melainkan juga tanggung jawab etis terhadap pengguna dan data yang diamanahkan.
                             </p>
-                            <p class="text-slate-500 text-sm leading-relaxed font-light mt-4">
-                                Saya percaya bahwa seorang profesional IT yang baik harus memiliki dua fondasi: <span class="text-slate-800 font-normal">kompetensi teknis yang terus berkembang</span> dan <span class="text-slate-800 font-normal">integritas karakter yang tidak pernah goyah</span>. Keduanya adalah identitas profesional yang ingin saya bangun.
+                            <p style="color: #94a3b8; font-size: 0.875rem; line-height: 1.8;">
+                                Saya percaya bahwa seorang profesional IT yang baik harus memiliki dua fondasi: <span style="color: #CCEFFF; font-weight: 500;">kompetensi teknis yang terus berkembang</span> dan <span style="color: #CCEFFF; font-weight: 500;">integritas karakter yang tidak pernah goyah</span>.
                             </p>
                         </div>
                     </div>
 
                     <div class="grid sm:grid-cols-2 gap-6">
                         <div class="animate-on-scroll delay-3">
-                            <div class="glass-card rounded-2xl p-6 h-full" style="box-shadow: 0 4px 30px -5px rgba(59,130,246,0.06);">
+                            <div class="glass-card rounded-2xl p-6 h-full">
                                 <div class="flex items-center gap-3 mb-4">
-                                    <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center">
-                                        <i data-lucide="eye" class="w-5 h-5 text-blue-600"></i>
+                                    <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: rgba(0,212,255,0.1); border: 1px solid rgba(0,212,255,0.3);">
+                                        <i data-lucide="eye" class="w-5 h-5" style="color: #00D4FF;"></i>
                                     </div>
-                                    <h4 class="text-base font-medium tracking-tight text-slate-800" style="font-family: 'Space Grotesk', sans-serif;">Visi</h4>
+                                    <h4 class="text-base font-medium" style="font-family: 'Orbitron', monospace; color: #00D4FF;">Visi</h4>
                                 </div>
-                                <p class="text-slate-500 text-sm leading-relaxed font-light">
+                                <p style="color: #94a3b8; font-size: 0.875rem; line-height: 1.8;">
                                     Menjadi Web Developer dan Software Engineer yang profesional, berintegritas, dan mampu menciptakan solusi digital yang berdampak positif bagi masyarakat Nusa Tenggara Barat dan Indonesia.
                                 </p>
                             </div>
                         </div>
                         <div class="animate-on-scroll delay-4">
-                            <div class="glass-card rounded-2xl p-6 h-full" style="box-shadow: 0 4px 30px -5px rgba(139,92,246,0.06);">
+                            <div class="glass-card rounded-2xl p-6 h-full">
                                 <div class="flex items-center gap-3 mb-4">
-                                    <div class="w-10 h-10 rounded-xl bg-purple-50 border border-purple-100 flex items-center justify-center">
-                                        <i data-lucide="target" class="w-5 h-5 text-purple-600"></i>
+                                    <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: rgba(255,0,255,0.1); border: 1px solid rgba(255,0,255,0.3);">
+                                        <i data-lucide="target" class="w-5 h-5" style="color: #FF00FF;"></i>
                                     </div>
-                                    <h4 class="text-base font-medium tracking-tight text-slate-800" style="font-family: 'Space Grotesk', sans-serif;">Misi</h4>
+                                    <h4 class="text-base font-medium" style="font-family: 'Orbitron', monospace; color: #FF00FF;">Misi</h4>
                                 </div>
-                                <p class="text-slate-500 text-sm leading-relaxed font-light">
-                                    Terus mengembangkan kompetensi teknis melalui proyek nyata, menerapkan prinsip etika profesi dalam setiap pekerjaan, dan berkontribusi aktif dalam ekosistem teknologi informasi yang bertanggung jawab dan bermanfaat.
+                                <p style="color: #94a3b8; font-size: 0.875rem; line-height: 1.8;">
+                                    Terus mengembangkan kompetensi teknis melalui proyek nyata, menerapkan prinsip etika profesi dalam setiap pekerjaan, dan berkontribusi aktif dalam ekosistem teknologi informasi yang bertanggung jawab.
                                 </p>
                             </div>
                         </div>
@@ -237,96 +215,108 @@
     <div class="section-divider max-w-7xl mx-auto"></div>
 
     <!-- HEART Values -->
-    <section id="heart" class="section-alt relative py-24 sm:py-32">
-        <div class="glow-orb w-96 h-96 bg-purple-400/8 top-1/3 -right-48"></div>
+    <section id="heart" class="relative py-24 sm:py-32">
+        <div class="glow-orb w-96 h-96 top-1/3 -right-48" style="opacity: 0.1;"></div>
         <div class="max-w-7xl mx-auto px-6">
             <div class="animate-on-scroll mb-6">
                 <span class="section-label block mb-4">02 — Ethical Value Statement</span>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight mb-6" style="font-family: 'Bricolage Grotesque', sans-serif; color: #0f172a;">
-                    Nilai <span style="background: linear-gradient(135deg, #2563eb, #059669, #d97706, #7c3aed, #dc2626); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">HEART</span> Saya
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight mb-6">
+                    Nilai <span class="gradient-text-dark">HEART</span> Saya
                 </h2>
             </div>
 
             <div class="animate-on-scroll delay-1 max-w-3xl mb-16">
-                <p class="text-slate-500 text-sm sm:text-base leading-relaxed font-light">
-                    Sebagai seorang mahasiswa Teknologi Informasi yang menuju dunia profesional, saya meyakini bahwa teknologi hanyalah alat — dan nilai dari alat itu ditentukan oleh karakter orang yang menggunakannya. Oleh karena itu, saya berkomitmen untuk menjadikan nilai-nilai HEART sebagai fondasi identitas profesional saya.
+                <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.8;">
+                    Sebagai seorang mahasiswa Teknologi Informasi yang menuju dunia profesional, saya meyakini bahwa teknologi hanyalah alat — dan nilai dari alat itu ditentukan oleh karakter orang yang menggunakannya.
                 </p>
             </div>
 
             <div class="space-y-5">
-                <div class="heart-card heart-h rounded-2xl p-6 sm:p-8 animate-on-scroll delay-1">
+                <!-- H -->
+                <div class="heart-card rounded-2xl p-6 sm:p-8 animate-on-scroll delay-1">
                     <div class="flex flex-col sm:flex-row gap-6">
                         <div class="flex-shrink-0"><div class="heart-letter">H</div></div>
                         <div class="flex-1">
                             <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-3">
-                                <h3 class="text-xl font-medium tracking-tight" style="font-family: 'Space Grotesk', sans-serif; color: #2563eb;">Humility</h3>
-                                <span class="text-slate-400 text-sm">Kerendahan Hati</span>
+                                <h3 class="text-xl font-medium" style="font-family: 'Orbitron', monospace; color: #00D4FF;">Humility</h3>
+                                <span style="color: #64748b; font-size: 0.875rem;">Kerendahan Hati</span>
                             </div>
-                            <p class="text-slate-500 text-sm leading-relaxed font-light mb-4">
-                                Terbuka terhadap kritik dan masukan. Selalu bersedia belajar teknologi baru. Mengakui keterbatasan diri dan terus berkembang melalui kolaborasi tim.
-                            </p>
-                            <div class="flex items-start gap-2 text-slate-400 text-xs italic quote-text bg-blue-50/50 rounded-lg p-3 border border-blue-100/50">
-                                <i data-lucide="quote" class="w-3 h-3 mt-0.5 flex-shrink-0 text-blue-400"></i>
-                                <span>"Saya mengakui bahwa saya selalu memiliki ruang untuk belajar, dan tidak malu untuk bertanya atau mengakui kesalahan."</span>
+                            <p style="color: #94a3b8; font-size: 0.875rem; line-height: 1.8; margin-bottom: 1rem;">Terbuka terhadap kritik dan masukan. Selalu bersedia belajar teknologi baru. Mengakui keterbatasan diri dan terus berkembang melalui kolaborasi tim.</p>
+                            <div class="flex items-start gap-2 rounded-lg p-3" style="background: rgba(0,212,255,0.05); border: 1px solid rgba(0,212,255,0.2);">
+                                <i data-lucide="quote" class="w-3 h-3 mt-0.5 flex-shrink-0" style="color: #00D4FF;"></i>
+                                <span style="color: #64748b; font-size: 0.75rem; font-style: italic;">"Saya mengakui bahwa saya selalu memiliki ruang untuk belajar, dan tidak malu untuk bertanya atau mengakui kesalahan."</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="heart-card heart-e rounded-2xl p-6 sm:p-8 animate-on-scroll delay-2">
+                <!-- E -->
+                <div class="heart-card rounded-2xl p-6 sm:p-8 animate-on-scroll delay-2">
                     <div class="flex flex-col sm:flex-row gap-6">
                         <div class="flex-shrink-0"><div class="heart-letter">E</div></div>
                         <div class="flex-1">
                             <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-3">
-                                <h3 class="text-xl font-medium tracking-tight" style="font-family: 'Space Grotesk', sans-serif; color: #059669;">Empathy</h3>
-                                <span class="text-slate-400 text-sm">Empati</span>
+                                <h3 class="text-xl font-medium" style="font-family: 'Orbitron', monospace; color: #34d399;">Empathy</h3>
+                                <span style="color: #64748b; font-size: 0.875rem;">Empati</span>
                             </div>
-                            <p class="text-slate-500 text-sm leading-relaxed font-light mb-4">
-                                Memahami kebutuhan pengguna sebelum menulis satu baris kode pun. Desain sistem yang user-friendly adalah bentuk empati nyata seorang developer.
-                            </p>
-                            <div class="flex items-start gap-2 text-slate-400 text-xs italic quote-text bg-emerald-50/50 rounded-lg p-3 border border-emerald-100/50">
-                                <i data-lucide="quote" class="w-3 h-3 mt-0.5 flex-shrink-0 text-emerald-400"></i>
-                                <span>"Kode yang baik lahir dari pemahaman mendalam akan manusia yang menggunakannya."</span>
+                            <p style="color: #94a3b8; font-size: 0.875rem; line-height: 1.8; margin-bottom: 1rem;">Memahami kebutuhan pengguna sebelum menulis satu baris kode pun. Desain sistem yang user-friendly adalah bentuk empati nyata seorang developer.</p>
+                            <div class="flex items-start gap-2 rounded-lg p-3" style="background: rgba(52,211,153,0.05); border: 1px solid rgba(52,211,153,0.2);">
+                                <i data-lucide="quote" class="w-3 h-3 mt-0.5 flex-shrink-0" style="color: #34d399;"></i>
+                                <span style="color: #64748b; font-size: 0.75rem; font-style: italic;">"Kode yang baik lahir dari pemahaman mendalam akan manusia yang menggunakannya."</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-          
+                <!-- A -->
+                <div class="heart-card rounded-2xl p-6 sm:p-8 animate-on-scroll delay-3">
+                    <div class="flex flex-col sm:flex-row gap-6">
+                        <div class="flex-shrink-0"><div class="heart-letter">A</div></div>
+                        <div class="flex-1">
+                            <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-3">
+                                <h3 class="text-xl font-medium" style="font-family: 'Orbitron', monospace; color: #fbbf24;">Authenticity</h3>
+                                <span style="color: #64748b; font-size: 0.875rem;">Autentisitas</span>
+                            </div>
+                            <p style="color: #94a3b8; font-size: 0.875rem; line-height: 1.8; margin-bottom: 1rem;">Kode yang saya tulis adalah karya orisinal. Tidak ada copy-paste tanpa atribusi. Kejujuran dalam laporan progres proyek adalah prinsip yang tidak bisa ditawar.</p>
+                            <div class="flex items-start gap-2 rounded-lg p-3" style="background: rgba(251,191,36,0.05); border: 1px solid rgba(251,191,36,0.2);">
+                                <i data-lucide="quote" class="w-3 h-3 mt-0.5 flex-shrink-0" style="color: #fbbf24;"></i>
+                                <span style="color: #64748b; font-size: 0.75rem; font-style: italic;">"Tidak menjiplak karya orang lain, tidak memanipulasi data, dan tidak melebih-lebihkan kemampuan diri."</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                <div class="heart-card heart-r rounded-2xl p-6 sm:p-8 animate-on-scroll delay-4">
+                <!-- R -->
+                <div class="heart-card rounded-2xl p-6 sm:p-8 animate-on-scroll delay-4">
                     <div class="flex flex-col sm:flex-row gap-6">
                         <div class="flex-shrink-0"><div class="heart-letter">R</div></div>
                         <div class="flex-1">
                             <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-3">
-                                <h3 class="text-xl font-medium tracking-tight" style="font-family: 'Space Grotesk', sans-serif; color: #7c3aed;">Respect</h3>
-                                <span class="text-slate-400 text-sm">Rasa Hormat</span>
+                                <h3 class="text-xl font-medium" style="font-family: 'Orbitron', monospace; color: #a78bfa;">Respect</h3>
+                                <span style="color: #64748b; font-size: 0.875rem;">Rasa Hormat</span>
                             </div>
-                            <p class="text-slate-500 text-sm leading-relaxed font-light mb-4">
-                                Menghormati privasi data pengguna. Mematuhi lisensi perangkat lunak. Menghargai kontribusi setiap anggota tim tanpa memandang senioritas.
-                            </p>
-                            <div class="flex items-start gap-2 text-slate-400 text-xs italic quote-text bg-purple-50/50 rounded-lg p-3 border border-purple-100/50">
-                                <i data-lucide="quote" class="w-3 h-3 mt-0.5 flex-shrink-0 text-purple-400"></i>
-                                <span>"Mengingatkan saya untuk menghargai privasi data pengguna, menghormati rekan kerja, dan menjaga kode etik profesi."</span>
+                            <p style="color: #94a3b8; font-size: 0.875rem; line-height: 1.8; margin-bottom: 1rem;">Menghormati privasi data pengguna. Mematuhi lisensi perangkat lunak. Menghargai kontribusi setiap anggota tim tanpa memandang senioritas.</p>
+                            <div class="flex items-start gap-2 rounded-lg p-3" style="background: rgba(167,139,250,0.05); border: 1px solid rgba(167,139,250,0.2);">
+                                <i data-lucide="quote" class="w-3 h-3 mt-0.5 flex-shrink-0" style="color: #a78bfa;"></i>
+                                <span style="color: #64748b; font-size: 0.75rem; font-style: italic;">"Mengingatkan saya untuk menghargai privasi data pengguna, menghormati rekan kerja, dan menjaga kode etik profesi."</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="heart-card heart-t rounded-2xl p-6 sm:p-8 animate-on-scroll delay-5">
+                <!-- T -->
+                <div class="heart-card rounded-2xl p-6 sm:p-8 animate-on-scroll delay-5">
                     <div class="flex flex-col sm:flex-row gap-6">
                         <div class="flex-shrink-0"><div class="heart-letter">T</div></div>
                         <div class="flex-1">
                             <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-3">
-                                <h3 class="text-xl font-medium tracking-tight" style="font-family: 'Space Grotesk', sans-serif; color: #dc2626;">Trust</h3>
-                                <span class="text-slate-400 text-sm">Kepercayaan</span>
+                                <h3 class="text-xl font-medium" style="font-family: 'Orbitron', monospace; color: #f87171;">Trust</h3>
+                                <span style="color: #64748b; font-size: 0.875rem;">Kepercayaan</span>
                             </div>
-                            <p class="text-slate-500 text-sm leading-relaxed font-light mb-4">
-                                Membangun kepercayaan melalui konsistensi antara janji dan tindakan. Sistem yang aman dan andal adalah wujud kepercayaan kepada pengguna.
-                            </p>
-                            <div class="flex items-start gap-2 text-slate-400 text-xs italic quote-text bg-red-50/50 rounded-lg p-3 border border-red-100/50">
-                                <i data-lucide="quote" class="w-3 h-3 mt-0.5 flex-shrink-0 text-red-400"></i>
-                                <span>"Kepercayaan klien, pengguna, dan rekan kerja adalah bukti nyata dari integritas seorang profesional IT."</span>
+                            <p style="color: #94a3b8; font-size: 0.875rem; line-height: 1.8; margin-bottom: 1rem;">Membangun kepercayaan melalui konsistensi antara janji dan tindakan. Sistem yang aman dan andal adalah wujud kepercayaan kepada pengguna.</p>
+                            <div class="flex items-start gap-2 rounded-lg p-3" style="background: rgba(248,113,113,0.05); border: 1px solid rgba(248,113,113,0.2);">
+                                <i data-lucide="quote" class="w-3 h-3 mt-0.5 flex-shrink-0" style="color: #f87171;"></i>
+                                <span style="color: #64748b; font-size: 0.75rem; font-style: italic;">"Kepercayaan klien, pengguna, dan rekan kerja adalah bukti nyata dari integritas seorang profesional IT."</span>
                             </div>
                         </div>
                     </div>
@@ -339,16 +329,14 @@
 
     <!-- Showcase of Works -->
     <section id="works" class="relative py-24 sm:py-32">
-        <div class="glow-orb w-80 h-80 bg-emerald-400/8 top-1/4 -left-40"></div>
+        <div class="glow-orb w-80 h-80 top-1/4 -left-40" style="opacity:0.1;"></div>
         <div class="max-w-7xl mx-auto px-6">
             <div class="animate-on-scroll mb-16">
                 <span class="section-label block mb-4">03 — Showcase of Works</span>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight mb-4" style="font-family: 'Bricolage Grotesque', sans-serif; color: #0f172a;">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight mb-4">
                     Karya <span class="gradient-text-dark">Unggulan</span>
                 </h2>
-                <p class="text-slate-500 text-sm sm:text-base font-light max-w-2xl">
-                    Karya yang mencerminkan kompetensi teknis dan penerapan etika profesi dalam setiap proses pengembangan.
-                </p>
+                <p style="color: #94a3b8; font-size: 0.95rem; max-width: 40rem;">Karya yang mencerminkan kompetensi teknis dan penerapan etika profesi dalam setiap proses pengembangan.</p>
             </div>
 
             <div class="space-y-8">
@@ -356,35 +344,31 @@
                     <div class="project-number">01</div>
                     <div class="relative z-10">
                         <div class="flex flex-wrap gap-2 mb-5">
-                            <span class="tag">PHP</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">HTML/CSS</span>
-                            <span class="tag">Admin Panel</span>
-                            <span class="tag">Web Security</span>
+                            <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">HTML/CSS</span><span class="tag">Admin Panel</span><span class="tag">Web Security</span>
                         </div>
-                        <h3 class="text-xl sm:text-2xl font-medium tracking-tight mb-2 text-slate-800" style="font-family: 'Space Grotesk', sans-serif;">Website Carbon Testing</h3>
-                        <p class="text-slate-400 text-sm mb-8">Admin & Developer</p>
+                        <h3 class="text-xl sm:text-2xl font-medium tracking-tight mb-2" style="font-family: 'Orbitron', monospace; color: #CCEFFF;">Website Carbon Testing</h3>
+                        <p style="color: #64748b; font-size: 0.875rem; margin-bottom: 2rem;">Admin & Developer</p>
                         <div class="grid md:grid-cols-3 gap-6">
                             <div>
                                 <div class="flex items-center gap-2 mb-3">
-                                    <div class="w-7 h-7 rounded-lg bg-amber-50 border border-amber-100 flex items-center justify-center"><i data-lucide="alert-triangle" class="w-3.5 h-3.5 text-amber-600"></i></div>
-                                    <h4 class="text-sm font-medium text-slate-700">Tantangan</h4>
+                                    <div class="w-7 h-7 rounded-lg flex items-center justify-center" style="background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.3);"><i data-lucide="alert-triangle" class="w-3.5 h-3.5" style="color: #fbbf24;"></i></div>
+                                    <h4 style="font-size: 0.875rem; font-weight: 500; color: #CCEFFF;">Tantangan</h4>
                                 </div>
-                                <p class="text-slate-500 text-sm leading-relaxed font-light">Memastikan keamanan data pengguna dan integritas hasil pengujian yang disimpan dalam database, mengingat data carbon testing merupakan informasi teknis yang sensitif dan harus akurat.</p>
+                                <p style="color: #94a3b8; font-size: 0.875rem; line-height: 1.8;">Memastikan keamanan data pengguna dan integritas hasil pengujian yang disimpan dalam database, mengingat data carbon testing merupakan informasi teknis yang sensitif dan harus akurat.</p>
                             </div>
                             <div>
                                 <div class="flex items-center gap-2 mb-3">
-                                    <div class="w-7 h-7 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-blue-600"></i></div>
-                                    <h4 class="text-sm font-medium text-slate-700">Penerapan Etika</h4>
+                                    <div class="w-7 h-7 rounded-lg flex items-center justify-center" style="background: rgba(0,212,255,0.1); border: 1px solid rgba(0,212,255,0.3);"><i data-lucide="shield-check" class="w-3.5 h-3.5" style="color: #00D4FF;"></i></div>
+                                    <h4 style="font-size: 0.875rem; font-weight: 500; color: #CCEFFF;">Penerapan Etika</h4>
                                 </div>
-                                <p class="text-slate-500 text-sm leading-relaxed font-light">Sistem autentikasi berlapis untuk <span class="text-blue-600 font-medium">Trust</span>, tidak ada manipulasi data untuk <span class="text-amber-600 font-medium">Authenticity</span>, logging otomatis untuk akuntabilitas, dan menjaga kerahasiaan data klien untuk <span class="text-purple-600 font-medium">Respect</span>.</p>
+                                <p style="color: #94a3b8; font-size: 0.875rem; line-height: 1.8;">Sistem autentikasi berlapis untuk <span style="color: #00D4FF; font-weight: 500;">Trust</span>, tidak ada manipulasi data untuk <span style="color: #fbbf24; font-weight: 500;">Authenticity</span>, logging otomatis untuk akuntabilitas, dan menjaga kerahasiaan data klien untuk <span style="color: #a78bfa; font-weight: 500;">Respect</span>.</p>
                             </div>
                             <div>
                                 <div class="flex items-center gap-2 mb-3">
-                                    <div class="w-7 h-7 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-600"></i></div>
-                                    <h4 class="text-sm font-medium text-slate-700">Hasil & Dampak</h4>
+                                    <div class="w-7 h-7 rounded-lg flex items-center justify-center" style="background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.3);"><i data-lucide="check-circle-2" class="w-3.5 h-3.5" style="color: #34d399;"></i></div>
+                                    <h4 style="font-size: 0.875rem; font-weight: 500; color: #CCEFFF;">Hasil & Dampak</h4>
                                 </div>
-                                <p class="text-slate-500 text-sm leading-relaxed font-light">Website berhasil berjalan stabil sebagai platform manajemen data carbon testing. Sistem admin yang aman dan antarmuka ramah pengguna meningkatkan efisiensi pengelolaan data.</p>
+                                <p style="color: #94a3b8; font-size: 0.875rem; line-height: 1.8;">Website berhasil berjalan stabil sebagai platform manajemen data carbon testing. Sistem admin yang aman dan antarmuka ramah pengguna meningkatkan efisiensi pengelolaan data.</p>
                             </div>
                         </div>
                     </div>
@@ -394,35 +378,31 @@
                     <div class="project-number">02</div>
                     <div class="relative z-10">
                         <div class="flex flex-wrap gap-2 mb-5">
-                            <span class="tag">Black Box Testing</span>
-                            <span class="tag">Equivalence Partitioning</span>
-                            <span class="tag">BVA</span>
-                            <span class="tag">TikTok Registration</span>
-                            <span class="tag">QA</span>
+                            <span class="tag">Black Box Testing</span><span class="tag">Equivalence Partitioning</span><span class="tag">BVA</span><span class="tag">TikTok Registration</span><span class="tag">QA</span>
                         </div>
-                        <h3 class="text-xl sm:text-2xl font-medium tracking-tight mb-2 text-slate-800" style="font-family: 'Space Grotesk', sans-serif;">Sistem Pendaftaran Akun — Black Box Testing</h3>
-                        <p class="text-slate-400 text-sm mb-8">Software Testing | Quality Assurance</p>
+                        <h3 class="text-xl sm:text-2xl font-medium tracking-tight mb-2" style="font-family: 'Orbitron', monospace; color: #CCEFFF;">Sistem Pendaftaran Akun — Black Box Testing</h3>
+                        <p style="color: #64748b; font-size: 0.875rem; margin-bottom: 2rem;">Software Testing | Quality Assurance</p>
                         <div class="grid md:grid-cols-3 gap-6">
                             <div>
                                 <div class="flex items-center gap-2 mb-3">
-                                    <div class="w-7 h-7 rounded-lg bg-amber-50 border border-amber-100 flex items-center justify-center"><i data-lucide="alert-triangle" class="w-3.5 h-3.5 text-amber-600"></i></div>
-                                    <h4 class="text-sm font-medium text-slate-700">Tantangan</h4>
+                                    <div class="w-7 h-7 rounded-lg flex items-center justify-center" style="background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.3);"><i data-lucide="alert-triangle" class="w-3.5 h-3.5" style="color: #fbbf24;"></i></div>
+                                    <h4 style="font-size: 0.875rem; font-weight: 500; color: #CCEFFF;">Tantangan</h4>
                                 </div>
-                                <p class="text-slate-500 text-sm leading-relaxed font-light">Merancang skenario pengujian komprehensif terhadap sistem pendaftaran akun TikTok, menemukan celah sistem secara sistematis tanpa akses ke kode sumber.</p>
+                                <p style="color: #94a3b8; font-size: 0.875rem; line-height: 1.8;">Merancang skenario pengujian komprehensif terhadap sistem pendaftaran akun TikTok, menemukan celah sistem secara sistematis tanpa akses ke kode sumber.</p>
                             </div>
                             <div>
                                 <div class="flex items-center gap-2 mb-3">
-                                    <div class="w-7 h-7 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-blue-600"></i></div>
-                                    <h4 class="text-sm font-medium text-slate-700">Penerapan Etika</h4>
+                                    <div class="w-7 h-7 rounded-lg flex items-center justify-center" style="background: rgba(0,212,255,0.1); border: 1px solid rgba(0,212,255,0.3);"><i data-lucide="shield-check" class="w-3.5 h-3.5" style="color: #00D4FF;"></i></div>
+                                    <h4 style="font-size: 0.875rem; font-weight: 500; color: #CCEFFF;">Penerapan Etika</h4>
                                 </div>
-                                <p class="text-slate-500 text-sm leading-relaxed font-light"><span class="text-blue-600 font-medium">Humility</span> — mengakui setiap bug secara jujur. <span class="text-amber-600 font-medium">Authenticity</span> — tidak memanipulasi hasil, sistem Fail tetap dilaporkan sebagai Fail. <span class="text-purple-600 font-medium">Respect</span> — kerja tim kolaboratif.</p>
+                                <p style="color: #94a3b8; font-size: 0.875rem; line-height: 1.8;"><span style="color: #00D4FF; font-weight: 500;">Humility</span> — mengakui setiap bug secara jujur. <span style="color: #fbbf24; font-weight: 500;">Authenticity</span> — tidak memanipulasi hasil, sistem Fail tetap dilaporkan sebagai Fail. <span style="color: #a78bfa; font-weight: 500;">Respect</span> — kerja tim kolaboratif.</p>
                             </div>
                             <div>
                                 <div class="flex items-center gap-2 mb-3">
-                                    <div class="w-7 h-7 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-600"></i></div>
-                                    <h4 class="text-sm font-medium text-slate-700">Hasil & Dampak</h4>
+                                    <div class="w-7 h-7 rounded-lg flex items-center justify-center" style="background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.3);"><i data-lucide="check-circle-2" class="w-3.5 h-3.5" style="color: #34d399;"></i></div>
+                                    <h4 style="font-size: 0.875rem; font-weight: 500; color: #CCEFFF;">Hasil & Dampak</h4>
                                 </div>
-                                <p class="text-slate-500 text-sm leading-relaxed font-light">Laporan pengujian lengkap mencakup 16 test case dengan 4 temuan bug kritis. Menggunakan metode Equivalence Partitioning, BVA, Decision Table, dan State Transition Testing.</p>
+                                <p style="color: #94a3b8; font-size: 0.875rem; line-height: 1.8;">Laporan pengujian lengkap mencakup 16 test case dengan 4 temuan bug kritis. Menggunakan metode Equivalence Partitioning, BVA, Decision Table, dan State Transition Testing.</p>
                             </div>
                         </div>
                     </div>
@@ -432,43 +412,39 @@
                     <div class="project-number">03</div>
                     <div class="relative z-10">
                         <div class="flex flex-wrap gap-2 mb-5">
-                            <span class="tag">PHP</span>
-                            <span class="tag">White Box Testing</span>
-                            <span class="tag">Statement Coverage</span>
-                            <span class="tag">Branch Coverage</span>
-                            <span class="tag">Logic Testing</span>
+                            <span class="tag">PHP</span><span class="tag">White Box Testing</span><span class="tag">Statement Coverage</span><span class="tag">Branch Coverage</span><span class="tag">Logic Testing</span>
                         </div>
-                        <h3 class="text-xl sm:text-2xl font-medium tracking-tight mb-2 text-slate-800" style="font-family: 'Space Grotesk', sans-serif;">Pengujian White Box Testing — Logika Program PHP</h3>
-                        <p class="text-slate-400 text-sm mb-8">Software Engineering | White Box Testing</p>
+                        <h3 class="text-xl sm:text-2xl font-medium tracking-tight mb-2" style="font-family: 'Orbitron', monospace; color: #CCEFFF;">Pengujian White Box Testing — Logika Program PHP</h3>
+                        <p style="color: #64748b; font-size: 0.875rem; margin-bottom: 2rem;">Software Engineering | White Box Testing</p>
                         <div class="grid md:grid-cols-3 gap-6">
                             <div>
                                 <div class="flex items-center gap-2 mb-3">
-                                    <div class="w-7 h-7 rounded-lg bg-amber-50 border border-amber-100 flex items-center justify-center"><i data-lucide="alert-triangle" class="w-3.5 h-3.5 text-amber-600"></i></div>
-                                    <h4 class="text-sm font-medium text-slate-700">Tantangan</h4>
+                                    <div class="w-7 h-7 rounded-lg flex items-center justify-center" style="background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.3);"><i data-lucide="alert-triangle" class="w-3.5 h-3.5" style="color: #fbbf24;"></i></div>
+                                    <h4 style="font-size: 0.875rem; font-weight: 500; color: #CCEFFF;">Tantangan</h4>
                                 </div>
-                                <p class="text-slate-500 text-sm leading-relaxed font-light">Memastikan setiap jalur logika program dieksekusi dan diuji secara menyeluruh menggunakan Statement Coverage dan Branch Coverage pada program penilaian akademik PHP.</p>
+                                <p style="color: #94a3b8; font-size: 0.875rem; line-height: 1.8;">Memastikan setiap jalur logika program dieksekusi dan diuji secara menyeluruh menggunakan Statement Coverage dan Branch Coverage pada program penilaian akademik PHP.</p>
                             </div>
                             <div>
                                 <div class="flex items-center gap-2 mb-3">
-                                    <div class="w-7 h-7 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-blue-600"></i></div>
-                                    <h4 class="text-sm font-medium text-slate-700">Penerapan Etika</h4>
+                                    <div class="w-7 h-7 rounded-lg flex items-center justify-center" style="background: rgba(0,212,255,0.1); border: 1px solid rgba(0,212,255,0.3);"><i data-lucide="shield-check" class="w-3.5 h-3.5" style="color: #00D4FF;"></i></div>
+                                    <h4 style="font-size: 0.875rem; font-weight: 500; color: #CCEFFF;">Penerapan Etika</h4>
                                 </div>
-                                <p class="text-slate-500 text-sm leading-relaxed font-light"><span class="text-amber-600 font-medium">Authenticity</span> — tidak menyembunyikan jalur kode yang belum diuji. <span class="text-blue-600 font-medium">Humility</span> — mengoreksi logika <code class="text-xs bg-slate-100 px-1.5 py-0.5 rounded font-mono text-slate-600 border border-slate-200">$nilai <= 80</code> menjadi <code class="text-xs bg-slate-100 px-1.5 py-0.5 rounded font-mono text-slate-600 border border-slate-200">$nilai <= 79</code> dan mengakui kesalahan.</p>
+                                <p style="color: #94a3b8; font-size: 0.875rem; line-height: 1.8;"><span style="color: #fbbf24; font-weight: 500;">Authenticity</span> — tidak menyembunyikan jalur kode yang belum diuji. <span style="color: #00D4FF; font-weight: 500;">Humility</span> — mengoreksi logika <code style="font-size: 0.75rem; background: rgba(255,255,255,0.1); padding: 1px 6px; border-radius: 4px; font-family: 'JetBrains Mono', monospace;">$nilai &lt;= 80</code> menjadi <code style="font-size: 0.75rem; background: rgba(255,255,255,0.1); padding: 1px 6px; border-radius: 4px; font-family: 'JetBrains Mono', monospace;">$nilai &lt;= 79</code> dan mengakui kesalahan.</p>
                             </div>
                             <div>
                                 <div class="flex items-center gap-2 mb-3">
-                                    <div class="w-7 h-7 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-600"></i></div>
-                                    <h4 class="text-sm font-medium text-slate-700">Hasil & Dampak</h4>
+                                    <div class="w-7 h-7 rounded-lg flex items-center justify-center" style="background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.3);"><i data-lucide="check-circle-2" class="w-3.5 h-3.5" style="color: #34d399;"></i></div>
+                                    <h4 style="font-size: 0.875rem; font-weight: 500; color: #CCEFFF;">Hasil & Dampak</h4>
                                 </div>
                                 <div class="flex items-baseline gap-3 mb-2">
-                                    <span class="text-2xl font-light text-emerald-600" style="font-family: 'Bricolage Grotesque', sans-serif;">100%</span>
-                                    <span class="text-slate-400 text-xs">Statement Coverage</span>
+                                    <span style="font-size: 1.5rem; font-weight: 300; color: #34d399; font-family: 'Orbitron', monospace;">100%</span>
+                                    <span style="color: #64748b; font-size: 0.75rem;">Statement Coverage</span>
                                 </div>
                                 <div class="flex items-baseline gap-3">
-                                    <span class="text-2xl font-light text-emerald-600" style="font-family: 'Bricolage Grotesque', sans-serif;">100%</span>
-                                    <span class="text-slate-400 text-xs">Branch Coverage</span>
+                                    <span style="font-size: 1.5rem; font-weight: 300; color: #34d399; font-family: 'Orbitron', monospace;">100%</span>
+                                    <span style="color: #64748b; font-size: 0.75rem;">Branch Coverage</span>
                                 </div>
-                                <p class="text-slate-400 text-xs mt-2">3 test case komprehensif</p>
+                                <p style="color: #64748b; font-size: 0.75rem; margin-top: 0.5rem;">3 test case komprehensif</p>
                             </div>
                         </div>
                     </div>
@@ -480,12 +456,12 @@
     <div class="section-divider max-w-7xl mx-auto"></div>
 
     <!-- Skills Section -->
-    <section id="skills" class="section-alt relative py-24 sm:py-32">
-        <div class="glow-orb w-72 h-72 bg-amber-400/8 bottom-1/4 -right-36"></div>
+    <section id="skills" class="relative py-24 sm:py-32">
+        <div class="glow-orb w-72 h-72 bottom-1/4 -right-36" style="opacity:0.1;"></div>
         <div class="max-w-7xl mx-auto px-6">
             <div class="animate-on-scroll mb-16">
                 <span class="section-label block mb-4">04 — Kompetensi Teknis</span>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight mb-4" style="font-family: 'Bricolage Grotesque', sans-serif; color: #0f172a;">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight mb-4">
                     Keahlian yang <span class="gradient-text-dark">Terus Dikembangkan</span>
                 </h2>
             </div>
@@ -494,67 +470,67 @@
                 <div class="animate-on-scroll delay-1">
                     <div class="flex items-center justify-between mb-3">
                         <div class="flex items-center gap-3">
-                            <div class="w-9 h-9 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center"><i data-lucide="code-2" class="w-4 h-4 text-blue-600"></i></div>
-                            <div><h4 class="text-sm font-medium text-slate-800">Web Development</h4><p class="text-xs text-slate-400">HTML5, CSS3, JavaScript, PHP, Bootstrap</p></div>
+                            <div class="w-9 h-9 rounded-xl flex items-center justify-center" style="background: rgba(0,212,255,0.1); border: 1px solid rgba(0,212,255,0.3);"><i data-lucide="code-2" class="w-4 h-4" style="color: #00D4FF;"></i></div>
+                            <div><h4 style="font-size: 0.875rem; font-weight: 500; color: #CCEFFF;">Web Development</h4><p style="font-size: 0.75rem; color: #64748b;">HTML5, CSS3, JavaScript, PHP, Bootstrap</p></div>
                         </div>
-                        <span class="text-sm text-slate-500 font-mono" data-skill="80">0%</span>
+                        <span style="font-size: 0.875rem; color: #00D4FF; font-family: 'JetBrains Mono', monospace;" data-skill="80">0%</span>
                     </div>
-                    <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80" style="background: linear-gradient(90deg, #3b82f6, #60a5fa);"></div></div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80"></div></div>
                 </div>
 
                 <div class="animate-on-scroll delay-2">
                     <div class="flex items-center justify-between mb-3">
                         <div class="flex items-center gap-3">
-                            <div class="w-9 h-9 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center"><i data-lucide="database" class="w-4 h-4 text-emerald-600"></i></div>
-                            <div><h4 class="text-sm font-medium text-slate-800">Database</h4><p class="text-xs text-slate-400">MySQL, phpMyAdmin, Database Design</p></div>
+                            <div class="w-9 h-9 rounded-xl flex items-center justify-center" style="background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.3);"><i data-lucide="database" class="w-4 h-4" style="color: #34d399;"></i></div>
+                            <div><h4 style="font-size: 0.875rem; font-weight: 500; color: #CCEFFF;">Database</h4><p style="font-size: 0.75rem; color: #64748b;">MySQL, phpMyAdmin, Database Design</p></div>
                         </div>
-                        <span class="text-sm text-slate-500 font-mono" data-skill="70">0%</span>
+                        <span style="font-size: 0.875rem; color: #34d399; font-family: 'JetBrains Mono', monospace;" data-skill="70">0%</span>
                     </div>
-                    <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="70" style="background: linear-gradient(90deg, #059669, #34d399);"></div></div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="70"></div></div>
                 </div>
 
                 <div class="animate-on-scroll delay-3">
                     <div class="flex items-center justify-between mb-3">
                         <div class="flex items-center gap-3">
-                            <div class="w-9 h-9 rounded-xl bg-purple-50 border border-purple-100 flex items-center justify-center"><i data-lucide="bug" class="w-4 h-4 text-purple-600"></i></div>
-                            <div><h4 class="text-sm font-medium text-slate-800">Software Testing</h4><p class="text-xs text-slate-400">Black Box, White Box, QA Documentation</p></div>
+                            <div class="w-9 h-9 rounded-xl flex items-center justify-center" style="background: rgba(167,139,250,0.1); border: 1px solid rgba(167,139,250,0.3);"><i data-lucide="bug" class="w-4 h-4" style="color: #a78bfa;"></i></div>
+                            <div><h4 style="font-size: 0.875rem; font-weight: 500; color: #CCEFFF;">Software Testing</h4><p style="font-size: 0.75rem; color: #64748b;">Black Box, White Box, QA Documentation</p></div>
                         </div>
-                        <span class="text-sm text-slate-500 font-mono" data-skill="80">0%</span>
+                        <span style="font-size: 0.875rem; color: #a78bfa; font-family: 'JetBrains Mono', monospace;" data-skill="80">0%</span>
                     </div>
-                    <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80" style="background: linear-gradient(90deg, #7c3aed, #a78bfa);"></div></div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80"></div></div>
                 </div>
 
                 <div class="animate-on-scroll delay-4">
                     <div class="flex items-center justify-between mb-3">
                         <div class="flex items-center gap-3">
-                            <div class="w-9 h-9 rounded-xl bg-orange-50 border border-orange-100 flex items-center justify-center"><i data-lucide="git-branch" class="w-4 h-4 text-orange-600"></i></div>
-                            <div><h4 class="text-sm font-medium text-slate-800">Version Control</h4><p class="text-xs text-slate-400">Git, GitHub</p></div>
+                            <div class="w-9 h-9 rounded-xl flex items-center justify-center" style="background: rgba(251,146,60,0.1); border: 1px solid rgba(251,146,60,0.3);"><i data-lucide="git-branch" class="w-4 h-4" style="color: #fb923c;"></i></div>
+                            <div><h4 style="font-size: 0.875rem; font-weight: 500; color: #CCEFFF;">Version Control</h4><p style="font-size: 0.75rem; color: #64748b;">Git, GitHub</p></div>
                         </div>
-                        <span class="text-sm text-slate-500 font-mono" data-skill="60">0%</span>
+                        <span style="font-size: 0.875rem; color: #fb923c; font-family: 'JetBrains Mono', monospace;" data-skill="60">0%</span>
                     </div>
-                    <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="60" style="background: linear-gradient(90deg, #ea580c, #fb923c);"></div></div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="60"></div></div>
                 </div>
 
                 <div class="animate-on-scroll delay-5">
                     <div class="flex items-center justify-between mb-3">
                         <div class="flex items-center gap-3">
-                            <div class="w-9 h-9 rounded-xl bg-pink-50 border border-pink-100 flex items-center justify-center"><i data-lucide="palette" class="w-4 h-4 text-pink-600"></i></div>
-                            <div><h4 class="text-sm font-medium text-slate-800">UI/UX Design</h4><p class="text-xs text-slate-400">Wireframing, Figma (dasar), Desain Responsif</p></div>
+                            <div class="w-9 h-9 rounded-xl flex items-center justify-center" style="background: rgba(244,114,182,0.1); border: 1px solid rgba(244,114,182,0.3);"><i data-lucide="palette" class="w-4 h-4" style="color: #f472b6;"></i></div>
+                            <div><h4 style="font-size: 0.875rem; font-weight: 500; color: #CCEFFF;">UI/UX Design</h4><p style="font-size: 0.75rem; color: #64748b;">Wireframing, Figma (dasar), Desain Responsif</p></div>
                         </div>
-                        <span class="text-sm text-slate-500 font-mono" data-skill="60">0%</span>
+                        <span style="font-size: 0.875rem; color: #f472b6; font-family: 'JetBrains Mono', monospace;" data-skill="60">0%</span>
                     </div>
-                    <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="60" style="background: linear-gradient(90deg, #db2777, #f472b6);"></div></div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="60"></div></div>
                 </div>
 
                 <div class="animate-on-scroll delay-5">
                     <div class="flex items-center justify-between mb-3">
                         <div class="flex items-center gap-3">
-                            <div class="w-9 h-9 rounded-xl bg-cyan-50 border border-cyan-100 flex items-center justify-center"><i data-lucide="brain" class="w-4 h-4 text-cyan-600"></i></div>
-                            <div><h4 class="text-sm font-medium text-slate-800">Problem Solving</h4><p class="text-xs text-slate-400">Algoritma, Logika Pemrograman, Debugging</p></div>
+                            <div class="w-9 h-9 rounded-xl flex items-center justify-center" style="background: rgba(34,211,238,0.1); border: 1px solid rgba(34,211,238,0.3);"><i data-lucide="brain" class="w-4 h-4" style="color: #22d3ee;"></i></div>
+                            <div><h4 style="font-size: 0.875rem; font-weight: 500; color: #CCEFFF;">Problem Solving</h4><p style="font-size: 0.75rem; color: #64748b;">Algoritma, Logika Pemrograman, Debugging</p></div>
                         </div>
-                        <span class="text-sm text-slate-500 font-mono" data-skill="80">0%</span>
+                        <span style="font-size: 0.875rem; color: #22d3ee; font-family: 'JetBrains Mono', monospace;" data-skill="80">0%</span>
                     </div>
-                    <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80" style="background: linear-gradient(90deg, #0891b2, #22d3ee);"></div></div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80"></div></div>
                 </div>
             </div>
         </div>
@@ -564,63 +540,48 @@
 
     <!-- Commitment Section -->
     <section id="commitment" class="relative py-24 sm:py-32">
-        <div class="glow-orb w-96 h-96 bg-blue-400/10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="glow-orb w-96 h-96 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="opacity:0.08;"></div>
         <div class="max-w-7xl mx-auto px-6">
             <div class="max-w-3xl mx-auto text-center">
                 <div class="animate-on-scroll">
                     <span class="section-label block mb-4">05 — Komitmen Profesional</span>
-                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight mb-8" style="font-family: 'Bricolage Grotesque', sans-serif; color: #0f172a;">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight mb-8">
                         Komitmen <span class="gradient-text-dark">Saya</span>
                     </h2>
                 </div>
 
                 <div class="animate-on-scroll delay-1">
-                    <div class="glass-card rounded-2xl p-8 sm:p-10 mb-12" style="box-shadow: 0 4px 40px -5px rgba(59,130,246,0.08);">
-                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-light mb-6">
-                            Portofolio ini bukan sekadar kumpulan karya — ini adalah cerminan perjalanan saya dalam membangun identitas sebagai profesional IT yang beretika. Setiap proyek yang saya tampilkan mewakili momen di mana saya tidak hanya menulis kode, tetapi juga membuat keputusan berdasarkan nilai dan prinsip moral.
-                        </p>
-                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-light mb-6">
-                            Saya berkomitmen untuk terus belajar, berkembang, dan menjaga integritas dalam setiap langkah karier saya. Saya percaya bahwa teknologi yang baik lahir dari tangan profesional yang tidak hanya cerdas secara teknis, tetapi juga bijak secara etis.
-                        </p>
-                        <p class="text-slate-800 text-sm font-medium">
-                            Itulah standar yang ingin saya pegang — bukan karena diwajibkan, melainkan karena saya yakin itulah cara yang benar untuk berkontribusi.
-                        </p>
+                    <div class="glass-card rounded-2xl p-8 sm:p-10 mb-12">
+                        <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.8; margin-bottom: 1.5rem;">Portofolio ini bukan sekadar kumpulan karya — ini adalah cerminan perjalanan saya dalam membangun identitas sebagai profesional IT yang beretika. Setiap proyek yang saya tampilkan mewakili momen di mana saya tidak hanya menulis kode, tetapi juga membuat keputusan berdasarkan nilai dan prinsip moral.</p>
+                        <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.8; margin-bottom: 1.5rem;">Saya berkomitmen untuk terus belajar, berkembang, dan menjaga integritas dalam setiap langkah karier saya. Saya percaya bahwa teknologi yang baik lahir dari tangan profesional yang tidak hanya cerdas secara teknis, tetapi juga bijak secara etis.</p>
+                        <p style="color: #CCEFFF; font-size: 0.875rem; font-weight: 500;">Itulah standar yang ingin saya pegang — bukan karena diwajibkan, melainkan karena saya yakin itulah cara yang benar untuk berkontribusi.</p>
                     </div>
                 </div>
 
                 <div class="animate-on-scroll delay-2 mb-12">
-                    <div class="relative">
-                        <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center shadow-sm">
-                            <i data-lucide="quote" class="w-5 h-5 text-blue-600"></i>
-                        </div>
-                        <div class="pt-6">
-                            <p class="quote-text text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
-                                "Integritas bukan tentang apa yang kamu lakukan ketika ada yang melihat, melainkan tentang apa yang kamu lakukan ketika tidak ada yang melihat. Itulah standar profesional sejati saya."
-                            </p>
-                        </div>
-                    </div>
+                    <p style="font-style: italic; color: #94a3b8; font-size: 1rem; line-height: 1.8;">"Integritas bukan tentang apa yang kamu lakukan ketika ada yang melihat, melainkan tentang apa yang kamu lakukan ketika tidak ada yang melihat. Itulah standar profesional sejati saya."</p>
                 </div>
 
                 <div class="animate-on-scroll delay-3 flex items-center justify-center gap-6 flex-wrap">
                     <div class="flex flex-col items-center gap-1.5">
-                        <div class="w-11 h-11 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center shadow-sm"><span class="text-blue-600 text-sm font-bold" style="font-family: 'Bricolage Grotesque', sans-serif;">H</span></div>
-                        <span class="text-slate-400 text-[10px] uppercase tracking-widest">Humility</span>
+                        <div class="w-11 h-11 rounded-full flex items-center justify-center" style="background: rgba(0,212,255,0.1); border: 1px solid rgba(0,212,255,0.3);"><span style="color: #00D4FF; font-size: 0.875rem; font-weight: 700; font-family: 'Orbitron', monospace;">H</span></div>
+                        <span style="color: #64748b; font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.15em;">Humility</span>
                     </div>
                     <div class="flex flex-col items-center gap-1.5">
-                        <div class="w-11 h-11 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center shadow-sm"><span class="text-emerald-600 text-sm font-bold" style="font-family: 'Bricolage Grotesque', sans-serif;">E</span></div>
-                        <span class="text-slate-400 text-[10px] uppercase tracking-widest">Empathy</span>
+                        <div class="w-11 h-11 rounded-full flex items-center justify-center" style="background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.3);"><span style="color: #34d399; font-size: 0.875rem; font-weight: 700; font-family: 'Orbitron', monospace;">E</span></div>
+                        <span style="color: #64748b; font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.15em;">Empathy</span>
                     </div>
                     <div class="flex flex-col items-center gap-1.5">
-                        <div class="w-11 h-11 rounded-full bg-amber-50 border border-amber-100 flex items-center justify-center shadow-sm"><span class="text-amber-600 text-sm font-bold" style="font-family: 'Bricolage Grotesque', sans-serif;">A</span></div>
-                        <span class="text-slate-400 text-[10px] uppercase tracking-widest">Authenticity</span>
+                        <div class="w-11 h-11 rounded-full flex items-center justify-center" style="background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.3);"><span style="color: #fbbf24; font-size: 0.875rem; font-weight: 700; font-family: 'Orbitron', monospace;">A</span></div>
+                        <span style="color: #64748b; font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.15em;">Authenticity</span>
                     </div>
                     <div class="flex flex-col items-center gap-1.5">
-                        <div class="w-11 h-11 rounded-full bg-purple-50 border border-purple-100 flex items-center justify-center shadow-sm"><span class="text-purple-600 text-sm font-bold" style="font-family: 'Bricolage Grotesque', sans-serif;">R</span></div>
-                        <span class="text-slate-400 text-[10px] uppercase tracking-widest">Respect</span>
+                        <div class="w-11 h-11 rounded-full flex items-center justify-center" style="background: rgba(167,139,250,0.1); border: 1px solid rgba(167,139,250,0.3);"><span style="color: #a78bfa; font-size: 0.875rem; font-weight: 700; font-family: 'Orbitron', monospace;">R</span></div>
+                        <span style="color: #64748b; font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.15em;">Respect</span>
                     </div>
                     <div class="flex flex-col items-center gap-1.5">
-                        <div class="w-11 h-11 rounded-full bg-red-50 border border-red-100 flex items-center justify-center shadow-sm"><span class="text-red-600 text-sm font-bold" style="font-family: 'Bricolage Grotesque', sans-serif;">T</span></div>
-                        <span class="text-slate-400 text-[10px] uppercase tracking-widest">Trust</span>
+                        <div class="w-11 h-11 rounded-full flex items-center justify-center" style="background: rgba(248,113,113,0.1); border: 1px solid rgba(248,113,113,0.3);"><span style="color: #f87171; font-size: 0.875rem; font-weight: 700; font-family: 'Orbitron', monospace;">T</span></div>
+                        <span style="color: #64748b; font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.15em;">Trust</span>
                     </div>
                 </div>
             </div>
@@ -630,26 +591,24 @@
     <div class="section-divider max-w-7xl mx-auto"></div>
 
     <!-- Contact -->
-    <section id="contact" class="section-alt relative py-24 sm:py-32">
+    <section id="contact" class="relative py-24 sm:py-32">
         <div class="max-w-7xl mx-auto px-6">
             <div class="max-w-2xl mx-auto text-center animate-on-scroll">
                 <span class="section-label block mb-4">06 — Hubungi Saya</span>
-                <h2 class="text-3xl sm:text-4xl font-light tracking-tight mb-6" style="font-family: 'Bricolage Grotesque', sans-serif; color: #0f172a;">
+                <h2 class="text-3xl sm:text-4xl font-light tracking-tight mb-6">
                     Mari <span class="gradient-text-dark">Terhubung</span>
                 </h2>
-                <p class="text-slate-500 text-sm font-light mb-10">
-                    Saya selalu terbuka untuk peluang kolaborasi, diskusi proyek, atau sekadar berbagi pemikiran tentang teknologi dan etika profesi.
-                </p>
+                <p style="color: #94a3b8; font-size: 0.875rem; margin-bottom: 2.5rem;">Saya selalu terbuka untuk peluang kolaborasi, diskusi proyek, atau sekadar berbagi pemikiran tentang teknologi dan etika profesi.</p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-                    <a href="mailto:renggokristo@gmail.com" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-sm font-medium px-6 py-3 rounded-full hover:from-blue-700 hover:to-blue-600 transition-all duration-300 w-full sm:w-auto justify-center shadow-lg shadow-blue-500/25">
+                    <a href="mailto:renggokristo@gmail.com" class="inline-flex items-center gap-2 text-black text-sm font-medium px-6 py-3 rounded-full transition-all duration-300 w-full sm:w-auto justify-center" style="background: linear-gradient(135deg, #00D4FF, #FF00FF); box-shadow: 0 0 20px rgba(0,212,255,0.4);">
                         <i data-lucide="mail" class="w-4 h-4"></i>
                         renggokristo@gmail.com
                     </a>
-                    <a href="https://www.linkedin.com/in/christoforus-r-b5b1803b3/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white/80 border border-slate-200 text-slate-700 text-sm font-medium px-6 py-3 rounded-full hover:bg-white hover:border-blue-200 hover:text-blue-700 transition-all duration-300 w-full sm:w-auto justify-center shadow-sm">
+                    <a href="https://www.linkedin.com/in/christoforus-r-b5b1803b3/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-medium px-6 py-3 rounded-full transition-all duration-300 w-full sm:w-auto justify-center" style="background: rgba(0,212,255,0.1); border: 1px solid rgba(0,212,255,0.3); color: #00D4FF;">
                         <i data-lucide="linkedin" class="w-4 h-4"></i>
                         LinkedIn
                     </a>
-                    <a href="https://github.com/renggokristo-maker" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white/80 border border-slate-200 text-slate-700 text-sm font-medium px-6 py-3 rounded-full hover:bg-white hover:border-slate-400 hover:text-slate-900 transition-all duration-300 w-full sm:w-auto justify-center shadow-sm">
+                    <a href="https://github.com/renggokristo-maker" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-medium px-6 py-3 rounded-full transition-all duration-300 w-full sm:w-auto justify-center" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #CCEFFF;">
                         <i data-lucide="github" class="w-4 h-4"></i>
                         GitHub
                     </a>
@@ -659,42 +618,30 @@
     </section>
 
     <!-- Footer -->
-    <footer class="border-t border-slate-200/60 py-12" style="background: rgba(255,255,255,0.3);">
+    <footer style="border-top: 1px solid rgba(0,212,255,0.15); padding: 3rem 0; background: rgba(10,37,64,0.3);">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
                 <div class="flex items-center gap-3">
-                    <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center shadow-sm">
-                        <span class="text-white font-bold text-xs" style="font-family: 'Bricolage Grotesque', sans-serif;">KR</span>
+                    <div class="w-7 h-7 rounded-lg flex items-center justify-center" style="background: linear-gradient(135deg, #00D4FF, #FF00FF);">
+                        <span style="color: #000; font-weight: 700; font-size: 0.75rem; font-family: 'Orbitron', monospace;">KR</span>
                     </div>
-                    <span class="text-slate-600 text-sm" style="font-family: 'Space Grotesk', sans-serif;">Kristoforus Renggo</span>
+                    <span style="color: #CCEFFF; font-size: 0.875rem; font-family: 'Rajdhani', sans-serif; letter-spacing: 1px;">Kristoforus Renggo</span>
                 </div>
                 <div class="flex items-center gap-4">
-                    <a href="mailto:renggokristo@gmail.com" class="text-slate-400 hover:text-blue-500 transition-colors" title="Email">
-                        <i data-lucide="mail" class="w-4 h-4"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/christoforus-r-b5b1803b3/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-blue-600 transition-colors" title="LinkedIn">
-                        <i data-lucide="linkedin" class="w-4 h-4"></i>
-                    </a>
-                    <a href="https://github.com/renggokristo-maker" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-slate-800 transition-colors" title="GitHub">
-                        <i data-lucide="github" class="w-4 h-4"></i>
-                    </a>
+                    <a href="mailto:renggokristo@gmail.com" style="color: #64748b;" title="Email"><i data-lucide="mail" class="w-4 h-4"></i></a>
+                    <a href="https://www.linkedin.com/in/christoforus-r-b5b1803b3/" target="_blank" rel="noopener noreferrer" style="color: #64748b;" title="LinkedIn"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                    <a href="https://github.com/renggokristo-maker" target="_blank" rel="noopener noreferrer" style="color: #64748b;" title="GitHub"><i data-lucide="github" class="w-4 h-4"></i></a>
                 </div>
             </div>
             <div class="mt-6 text-center">
-                <p class="text-slate-400 text-xs">NIM: 24021002 · D-III Teknologi Informasi · Politeknik Elbajo Commodus · Labuan Bajo, Mei 2026</p>
+                <p style="color: #64748b; font-size: 0.75rem;">NIM: 24021002 · D-III Teknologi Informasi · Politeknik Elbajo Commodus · Labuan Bajo, Mei 2026</p>
             </div>
-            <div class="mt-6 pt-6 border-t border-slate-200/40 text-center">
-                <p class="text-slate-400 text-xs">Dibuat oleh Kristoforus Renggo</p>
-                <p class="text-slate-300 text-[10px] mt-1 uppercase tracking-widest">Ethical Portfolio · Etika Profesi 2025/2026</p>
+            <div class="mt-4 pt-4 text-center" style="border-top: 1px solid rgba(0,212,255,0.1);">
+                <p style="color: #64748b; font-size: 0.75rem;">Dibuat oleh Kristoforus Renggo</p>
+                <p style="color: #334155; font-size: 0.625rem; margin-top: 0.25rem; text-transform: uppercase; letter-spacing: 0.2em;">Ethical Portfolio · Etika Profesi 2025/2026</p>
             </div>
         </div>
     </footer>
-
-    <!-- Toast -->
-    <div class="toast" id="toast">
-        <i data-lucide="info" class="w-4 h-4 text-blue-500 flex-shrink-0"></i>
-        <span class="text-sm text-slate-600" id="toastMessage">Pesan</span>
-    </div>
 
     <script>
         lucide.createIcons();
@@ -704,21 +651,6 @@
         profileImg.addEventListener('load', function() { profilePlaceholder.style.display = 'none'; });
         profileImg.addEventListener('error', function() { profileImg.style.display = 'none'; profilePlaceholder.style.display = 'block'; });
 
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenuClose = document.getElementById('mobileMenuClose');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileOverlay = document.getElementById('mobileOverlay');
-        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-
-        function openMobileMenu() { mobileMenu.classList.add('open'); mobileOverlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
-        function closeMobileMenu() { mobileMenu.classList.remove('open'); mobileOverlay.classList.remove('open'); document.body.style.overflow = ''; }
-
-        mobileMenuBtn.addEventListener('click', openMobileMenu);
-        mobileMenuClose.addEventListener('click', closeMobileMenu);
-        mobileOverlay.addEventListener('click', closeMobileMenu);
-        mobileNavLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
-
-        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
         const scrollObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -731,7 +663,7 @@
                     });
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
         document.querySelectorAll('.animate-on-scroll').forEach(el => scrollObserver.observe(el));
 
